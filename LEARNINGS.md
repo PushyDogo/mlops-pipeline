@@ -28,3 +28,10 @@ January 2024. This showed why data validation matters before model evaluation.
 IDs.
 - Python dependency compatibility mattered: MLflow stable required compatible versions of pandas, pyarrow,
 protobuf, and setuptools.
+- DVC tracks large files by committing small `.dvc` pointer files to Git and storing actual file contents
+in a DVC cache/remote.
+- A broad `.gitignore` pattern can accidentally interfere with DVC file discovery unless `.dvc` pointer
+files and their parent directories are explicitly unignored.
+- A local DVC remote proved the workflow before introducing MinIO/S3.
+- Deleting local data and restoring it with `dvc pull` reproduced the same training metrics: MAE 0.9666
+and RMSE 1.9680.
