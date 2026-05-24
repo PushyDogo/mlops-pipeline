@@ -1,0 +1,20 @@
+[project]
+name = "mlops-taxi-tip"
+version = "0.1.0"
+description = "Interview-oriented MLOps pipeline for NYC taxi tip prediction."
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
