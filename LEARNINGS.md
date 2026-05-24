@@ -13,3 +13,18 @@ as we build the pipeline.
   succeeds when network access is allowed.
 - An empty `.git` directory existed, which prevents this directory from being a
   valid Git repository until it is removed or replaced.
+
+## Week 1: Baseline Training and Tracking
+
+- One month of NYC yellow taxi data had 2,964,624 raw rows.
+- After cleaning invalid targets, invalid fares, invalid distances, invalid durations, missing values, and
+out-of-month timestamps, the training dataset had 2,752,434 rows.
+- A random train/test split gave MAE 0.9885 and RMSE 2.0673.
+- A time-based split gave MAE 0.9666 and RMSE 1.9680.
+- The raw January 2024 file contained a small number of invalid timestamps, including records outside
+January 2024. This showed why data validation matters before model evaluation.
+- We saved metrics manually first to understand the pain MLflow solves.
+- MLflow Tracking now records params, metrics, model artifacts, metrics artifacts, timestamps, and run
+IDs.
+- Python dependency compatibility mattered: MLflow stable required compatible versions of pandas, pyarrow,
+protobuf, and setuptools.
