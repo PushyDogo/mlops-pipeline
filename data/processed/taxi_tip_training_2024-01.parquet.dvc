@@ -1,0 +1,5 @@
+outs:
+- md5: 002bb1f7cce780a2eba73ad0c6ca9b40
+  size: 41012997
+  hash: md5
+  path: taxi_tip_training_2024-01.parquet

@@ -6,9 +6,11 @@ __pycache__/
 
 # Local data and model outputs will be tracked through DVC or artifact stores,
 # not committed directly to Git.
-data/raw/
+data/raw/**
+!data/raw/**/*.dvc
 data/interim/
-data/processed/
+data/processed/**
+!data/processed/**/*.dvc
 models/
 mlruns/
-
+mlflow.db
